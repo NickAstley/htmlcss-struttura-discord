@@ -1,0 +1,75 @@
+:root {
+    --padding-default: 2rem;
+    --section-content-min-height: 400px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-size: 16px;
+}
+
+header {
+    background-color: #ADD8E6;
+}
+
+header ul li {
+    list-style: none;
+    display: inline;
+}
+
+.mustard-bg {
+    background-color: #c2bbaa;;
+}
+
+.dark-blue-bg {
+    background-color: #00008B;
+}
+
+.pink-bg {
+    background-color: #EE82EE;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: var(--padding-default) 0;
+}
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-box > * {
+    border : 2px dashed black;
+    flex-grow: 1;
+    padding: calc(var(--padding-default) / 4);
+}
+
+header .container {
+    padding: calc(var(--padding-default) / 4) 0;
+}
+
+.flex-box .navbar {
+    text-align: center;
+    flex-grow: 3;
+}
+
+.flex-box .login-button {
+    text-align: right;
+}
+
+.jumbotron-section .container{
+    padding: var(--padding-default) calc(var(--padding-default) * 4);
+}
+
+.jumbotron-content {
+    min-height: var(--section-content-min-height);
+    border : 2px dashed black;
+}
