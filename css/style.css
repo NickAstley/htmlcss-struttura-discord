@@ -1,3 +1,4 @@
+/* Variables declaration */
 :root {
     --padding-default: 2rem;
     --section-content-min-height: 400px;
@@ -22,6 +23,17 @@ header ul li {
     display: inline;
 }
 
+footer {
+    background-color: #23272A;
+    padding-top: 5px;
+}
+
+footer hr {
+    color: white;
+}
+
+/* Background color classes */
+
 .mustard-bg {
     background-color: #DAA520;;
 }
@@ -38,7 +50,7 @@ header ul li {
     background-color: #1E90FF;
 }
 
-.salmon-bg {
+.light-pink-bg {
     background-color: #FFC0CB;
 }
 
@@ -49,6 +61,20 @@ header ul li {
 .green-bg {
     background-color: #228B22;
 }
+
+.salmon-bg {
+    background-color: #F08080;
+}
+
+.teal-bg {
+    background-color: #20B2AA;
+}
+
+.light-blue-bg {
+    background-color: #7FFFD4;
+}
+
+
 
 .container {
     width: 100%;
@@ -63,11 +89,26 @@ header ul li {
     justify-content: space-between;
 }
 
+.grow {
+    flex-grow: 1.5;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Flex-items styling */
 .flex-box > * {
     border : 2px dashed black;
     flex-grow: 1;
+    min-height: var(--section-content-min-height);
 }
 
+header .flex-box > *, footer .flex-box .logo, footer .flex-box .login-button {
+    min-height: unset;
+}
+
+/* Header content */
 header .container {
     padding: calc(var(--padding-default) / 4) 0;
 }
@@ -85,6 +126,7 @@ header .container .flex-box > * {
     text-align: right;
 }
 
+/* Main content */
 .jumbotron-section .container{
     padding: var(--padding-default) calc(var(--padding-default) * 4);
 }
@@ -94,18 +136,29 @@ header .container .flex-box > * {
     border : 2px dashed black;
 }
 
-main .flex-box > * {
-    min-height: var(--section-content-min-height);
-}
-
-.grow {
-    flex-grow: 1.5;
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
-}
-
-.section-4 .container .flex-box > * {
+.section-4 .container > div {
     min-height: calc(var(--section-content-min-height) * 2);
+    border : 2px dashed black;
+}
+
+/* Footer content */
+footer .flex-box .white-border {
+    border-color: white;
+}
+
+footer .footer-1 {
+    padding: 5px 0 var(--padding-default) 0;
+}
+
+footer .footer-2 {
+    padding: 10px 0 0 0;
+}
+
+footer .footer-2 .flex-box {
+    padding: calc(var(--padding-default) / 2) 0;
+}
+
+footer .footer-2 .flex-box > * {
+    flex-grow: 0;
+    padding: calc(var(--padding-default) / 8) calc(var(--padding-default) / 4);
 }
