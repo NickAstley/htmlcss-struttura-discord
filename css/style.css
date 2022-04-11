@@ -23,7 +23,7 @@ header ul li {
 }
 
 .mustard-bg {
-    background-color: #c2bbaa;;
+    background-color: #DAA520;;
 }
 
 .dark-blue-bg {
@@ -34,6 +34,22 @@ header ul li {
     background-color: #EE82EE;
 }
 
+.blue-bg {
+    background-color: #1E90FF;
+}
+
+.salmon-bg {
+    background-color: #FFC0CB;
+}
+
+.grey-bg {
+    background-color: #D3D3D3;
+}
+
+.green-bg {
+    background-color: #228B22;
+}
+
 .container {
     width: 100%;
     max-width: 960px;
@@ -41,6 +57,7 @@ header ul li {
     margin: 0 auto;
     padding: var(--padding-default) 0;
 }
+
 .flex-box {
     display: flex;
     justify-content: space-between;
@@ -49,11 +66,14 @@ header ul li {
 .flex-box > * {
     border : 2px dashed black;
     flex-grow: 1;
-    padding: calc(var(--padding-default) / 4);
 }
 
 header .container {
     padding: calc(var(--padding-default) / 4) 0;
+}
+
+header .container .flex-box > * {
+    padding: calc(var(--padding-default) / 4);
 }
 
 .flex-box .navbar {
@@ -72,4 +92,20 @@ header .container {
 .jumbotron-content {
     min-height: var(--section-content-min-height);
     border : 2px dashed black;
+}
+
+main .flex-box > * {
+    min-height: var(--section-content-min-height);
+}
+
+.grow {
+    flex-grow: 1.5;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.section-4 .container .flex-box > * {
+    min-height: calc(var(--section-content-min-height) * 2);
 }
